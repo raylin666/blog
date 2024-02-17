@@ -109,6 +109,9 @@ if (!function_exists('_g')) {
 </head>
 
 <body>
+
+<?php doAction('loading_dynamic_effect_1') ?>
+
 <div id="Joe">
     <header class="joe_header">
         <div class="joe_header__above">
