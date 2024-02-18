@@ -1,22 +1,5 @@
-
-*{
-	margin:0em;
-	padding:0em;
-}
-
-body { 
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	background: #403833;
-	font-family: 'Open Sans';
-	font-weight: 100;
-	color:#f2f2f2;
-	font-size:100%;
-	margin:0em;
-	padding:0em;
-}
-
 /* Start the loader code, first, let's align it the center of screen */
-.loader {
+#loadingDynamicEffect {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -34,10 +17,11 @@ body {
     -ms-user-select: none;
     user-select: none;
     cursor:default;
+	z-index: 100000;
 }
 
 /* Text styles */
-.loader .text{
+#loadingDynamicEffect .text{
 	position:absolute;
 	top: 1.7em;
 	left: 0.15em;
@@ -60,7 +44,7 @@ body {
 	white-space: nowrap;
 }
 
-.loader .text span{
+#loadingDynamicEffect .text span{
 	display:block;
 	float:left;
 	-webkit-animation: text cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.2s infinite;
@@ -71,7 +55,7 @@ body {
 	color:#F2F2EF;
 }
 
-.loader .text span:nth-child(1){
+#loadingDynamicEffect .text span:nth-child(1){
 	-webkit-animation-delay: 0ms; 
 	-moz-animation-delay: 0ms; 
 	-ms-animation-delay: 0ms; 
@@ -79,7 +63,7 @@ body {
 	animation-delay: 0ms;
 }
 
-.loader .text span:nth-child(2){
+#loadingDynamicEffect .text span:nth-child(2){
 	-webkit-animation-delay: 100ms; 
 	-moz-animation-delay: 100ms; 
 	-ms-animation-delay: 100ms; 
@@ -87,7 +71,7 @@ body {
 	animation-delay: 100ms;
 }
 
-.loader .text span:nth-child(3){
+#loadingDynamicEffect .text span:nth-child(3){
 	-webkit-animation-delay: 200ms; 
 	-moz-animation-delay: 200ms; 
 	-ms-animation-delay: 200ms; 
@@ -95,7 +79,7 @@ body {
 	animation-delay: 200ms;
 }
 
-.loader .text span:nth-child(4){
+#loadingDynamicEffect .text span:nth-child(4){
 	-webkit-animation-delay: 300ms; 
 	-moz-animation-delay: 300ms; 
 	-ms-animation-delay: 300ms; 
@@ -103,7 +87,7 @@ body {
 	animation-delay: 300ms;
 }
 
-.loader .text span:nth-child(5){
+#loadingDynamicEffect .text span:nth-child(5){
 	-webkit-animation-delay: 400ms; 
 	-moz-animation-delay: 400ms; 
 	-ms-animation-delay: 400ms; 
@@ -111,7 +95,7 @@ body {
 	animation-delay: 400ms;
 }
 
-.loader .text span:nth-child(6){
+#loadingDynamicEffect .text span:nth-child(6){
 	-webkit-animation-delay: 500ms; 
 	-moz-animation-delay: 500ms; 
 	-ms-animation-delay: 500ms; 
@@ -119,7 +103,7 @@ body {
 	animation-delay: 500ms;
 }
 
-.loader .text span:nth-child(7){
+#loadingDynamicEffect .text span:nth-child(7){
 	-webkit-animation-delay: 600ms; 
 	-moz-animation-delay: 600ms; 
 	-ms-animation-delay: 600ms; 
@@ -128,7 +112,7 @@ body {
 }
 
 /* cube container */
-.rotation {
+#loadingDynamicEffect .rotation {
     width: 12.5em;
     height: 12.5em;
     position: relative;
@@ -140,21 +124,21 @@ body {
 	-o-transform:rotate(45deg);
 	transform:rotate(45deg);
 }
- 
-svg {
+
+#loadingDynamicEffect svg {
     position: absolute;
     top: 0;
     left: 0;
 }
- 
-svg line {
+
+#loadingDynamicEffect svg line {
     stroke-width: 10px;
     fill: none;
     stroke-dasharray: 200px;
 }
 
 /* Style for line */
-.rotation svg line.top {
+#loadingDynamicEffect .rotation svg line.top {
 	stroke: #DB2F00;
 	-webkit-animation: topline cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.5s infinite;
 	-moz-animation: topline cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.5s infinite;
@@ -163,8 +147,8 @@ svg line {
 	-o-animation: topline cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.5s infinite;
 	animation: topline cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.5s infinite;
 }
- 
-.rotation svg line.bottom {
+
+#loadingDynamicEffect .rotation svg line.bottom {
     stroke: #DB2F00;
 	-webkit-animation: bottomline cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.5s infinite ;
 	-moz-animation: bottomline cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.5s infinite ;
@@ -173,8 +157,8 @@ svg line {
 	-o-animation: bottomline cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.5s infinite ;
 	animation: bottomline cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.5s infinite ;
 }
- 
-.rotation svg line.left {
+
+#loadingDynamicEffect .rotation svg line.left {
     stroke: #13A3A5;
 	-webkit-animation: leftline cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.5s infinite;
 	-moz-animation: leftline cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.5s infinite;
@@ -183,8 +167,8 @@ svg line {
 	-o-animation: leftline cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.5s infinite;
 	animation: leftline cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.5s infinite;
 }
- 
-.rotation svg line.right {
+
+#loadingDynamicEffect .rotation svg line.right {
     stroke: #13A3A5;
 	-webkit-animation: rightline cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.5s infinite;
 	-moz-animation: rightline cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.5s infinite;

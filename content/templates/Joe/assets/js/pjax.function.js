@@ -96,7 +96,7 @@ function onSend(xhr, options)
     // TODO 预加载函数可写在这里
 
     // 开启加载动画
-    $("#loadingDynamicEffect").css("display", "block");
+    $('#loading').css('display', 'block');
 }
 
 function onClick(options)
@@ -149,5 +149,5 @@ function onComplete(xhr, textStatus, options)
     // TODO PJAX 加载结束的回调函数 解决JS无法定位的问题, 重新定位容器内容的函数写在这里
 
     // 关闭加载动画
-    $("#loadingDynamicEffect").css("display", "none");
+    $('#loading').css('display', 'none');
 }

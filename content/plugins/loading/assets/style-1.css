@@ -1,5 +1,5 @@
 /* Start the loader code, first, let's align it the center of screen */
-.loader {
+#loadingDynamicEffect {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -21,7 +21,7 @@
 }
 
 /* Text align it the center of screen and connect the looped animation for 2 seconds */
-.text{
+#loadingDynamicEffect .text{
 	position: absolute;
 	left: -1.3em;
 	top: -1.7em;
@@ -34,7 +34,7 @@
 }
 
 /* Set for the first layer vertical position */
-.vertical{
+#loadingDynamicEffect .vertical{
 	position:absolute;
 	top: -1.84em;
 	left: -0.4em;
@@ -46,7 +46,7 @@
 }
 
 /* Set for the second layer horizontal position */
-.horizontal{
+#loadingDynamicEffect .horizontal{
 	position:absolute;
 	top:0em;
 	left:0em;
@@ -58,13 +58,13 @@
 }
 
 /* The next two classes do mirror for animation */
-.circlesup{
+#loadingDynamicEffect .circlesup{
 	position:absolute;
 	top: -4.7em;
 	right: 12.1em;
 }
 
-.circlesdwn{
+#loadingDynamicEffect .circlesdwn{
 	position:absolute;
 	top:2.5em;
 	right:-13.5em;
@@ -76,7 +76,7 @@
 }
 
 /* Create a container for our circles, rotate it 45 degrees and set animation*/
-.circle {
+#loadingDynamicEffect .circle {
 	position: absolute;
 	width: 15em;
 	height: 15em;
@@ -95,7 +95,7 @@
 } 
 
 /* Style's of our circles */
-.circle:after {
+#loadingDynamicEffect .circle:after {
 	content: '';
 	position: absolute;
 	width: 2em;
@@ -108,7 +108,7 @@
 	background: #13A3A5; /* Pick a color 1*/
 }
 
-.circle:nth-child(2) {
+#loadingDynamicEffect .circle:nth-child(2) {
 	-webkit-animation-delay: 100ms; 
 	-moz-animation-delay: 100ms; 
 	-ms-animation-delay: 100ms; 
@@ -117,7 +117,7 @@
 	z-index:4;
 }
 
-.circle:nth-child(2):after  {
+#loadingDynamicEffect .circle:nth-child(2):after  {
 	background: #56bebf; /* Pick a color 2*/
 	-webkit-transform: scale(0.8,0.8);
 	-moz-transform: scale(0.8,0.8);
@@ -126,7 +126,7 @@
 	transform: scale(0.8,0.8);
 }
 
-.circle:nth-child(3) {
+#loadingDynamicEffect .circle:nth-child(3) {
 	-webkit-animation-delay: 225ms; 
 	-moz-animation-delay: 225ms; 
 	-ms-animation-delay: 225ms; 
@@ -135,7 +135,7 @@
 	z-index:3;
 }
 
-.circle:nth-child(3):after  {
+#loadingDynamicEffect .circle:nth-child(3):after  {
 	background: #ffa489; /* Pick a color 3*/
 	-webkit-transform: scale(0.6,0.6);
 	-moz-transform: scale(0.6,0.6);
@@ -144,7 +144,7 @@
 	transform: scale(0.6,0.6);
 }
 
-.circle:nth-child(4) {
+#loadingDynamicEffect .circle:nth-child(4) {
 	-webkit-animation-delay: 350ms; 
 	-moz-animation-delay: 350ms; 
 	-ms-animation-delay: 350ms; 
@@ -153,7 +153,7 @@
 	z-index:2;
 }
 
-.circle:nth-child(4):after  {
+#loadingDynamicEffect .circle:nth-child(4):after  {
 	background: #ff6d37; /* Pick a color 4*/
 	-webkit-transform: scale(0.4,0.4);
 	-moz-transform: scale(0.4,0.4);
@@ -163,7 +163,7 @@
 }
 
 
-.circle:nth-child(5) {
+#loadingDynamicEffect .circle:nth-child(5) {
 	-webkit-animation-delay: 475ms; 
 	-moz-animation-delay: 475ms; 
 	-ms-animation-delay: 475ms; 
@@ -172,7 +172,7 @@
 	z-index:1;
 }
 
-.circle:nth-child(5):after  {
+#loadingDynamicEffect .circle:nth-child(5):after  {
 	background: #DB2F00; /* Pick a color 5*/
 	-webkit-transform: scale(0.2,0.2);
 	-moz-transform: scale(0.2,0.2);
@@ -301,5 +301,5 @@
 	60%		{ transform:scale(1,1); 
 			  animation-timing-function: ease-out;  }
 
-	100%	{ transform:scale(0.2,0.2);  } 
+	100%	{ transform:scale(0.2,0.2);  }
 }

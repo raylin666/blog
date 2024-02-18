@@ -1,22 +1,5 @@
-
-*{
-	margin:0em;
-	padding:0em;
-}
-
-body { 
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	background: #403833;
-	font-family: 'Open Sans';
-	font-weight: 100;
-	color:#f2f2f2;
-	font-size:100%;
-	margin:0em;
-	padding:0em;
-}
-
 /* Start the loader code, first, let's align it the center of screen */
-.loader {
+#loadingDynamicEffect {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -34,9 +17,10 @@ body {
     -ms-user-select: none;
     user-select: none;
     cursor:default;
+	z-index: 100000;
 }
 
-.line{
+#loadingDynamicEffect .line{
 	border-bottom:5px solid #f2f2f2;
 	overflow:hidden;
 	width:100%;
@@ -62,7 +46,7 @@ body {
 	box-shadow: inset 0px -5px 10px -7px rgba(0,0,0,0.75), inset 0px 5px 10px -7px rgba(0,0,0,0.75);
 }
 
-.cap{
+#loadingDynamicEffect .cap{
 	position:absolute;
 	left:-1px;
 	height:100%;

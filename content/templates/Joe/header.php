@@ -110,7 +110,9 @@ if (!function_exists('_g')) {
 
 <body>
 
-<?php doAction('loading_dynamic_effect_1') ?>
+<div id="loading" style="display: block">
+    <?php doAction('loading_dynamic_effect') ?>
+</div>
 
 <div id="Joe">
     <header class="joe_header">
