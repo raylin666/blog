@@ -148,6 +148,11 @@ function onComplete(xhr, textStatus, options)
 {
     // TODO PJAX 加载结束的回调函数 解决JS无法定位的问题, 重新定位容器内容的函数写在这里
 
+    if (textStatus.status === 200) {
+        // TODO 加载页面失败处理
+
+    }
+
     // 关闭加载动画
     $('#loading').css('display', 'none');
 }

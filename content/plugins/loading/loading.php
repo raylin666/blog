@@ -20,11 +20,18 @@ class LoadingDynamicEffect
     protected $dynamicEffectValue;
 
     /**
-     * @param $dynamicEffectValue
+     * @var string|null 遮罩层背景颜色, 默认无
      */
-    public function __construct($dynamicEffectValue)
+    protected ?string $maskBackgroundColor = null;
+
+    /**
+     * @param string|int $dynamicEffectValue    动效模版值, 目前有 1 - 10 可选值
+     * @param string|null $maskBackgroundColor  遮罩层背景颜色, 默认无
+     */
+    public function __construct($dynamicEffectValue, ?string $maskBackgroundColor = null)
     {
         $this->dynamicEffectValue = $dynamicEffectValue;
+        $this->maskBackgroundColor = $maskBackgroundColor;
     }
 
     public function run()
@@ -42,14 +49,43 @@ class LoadingDynamicEffect
             return null;
         }
 
+        if (is_string($this->maskBackgroundColor)) {
+            echo $this->showMask($this->maskBackgroundColor);
+        }
+
         echo $result;
+    }
+
+    /**
+     * 显示遮罩层
+     * @param string $backgroundColor
+     * @return string
+     */
+    protected function showMask(string $backgroundColor): string
+    {
+        return <<<EOL
+            <div id="loadingDynamicEffectMask"></div>
+<style>
+   #loadingDynamicEffectMask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      /* 使用rgba设置背景色，a为透明度，0.5表示半透明 */
+      background-color: {$backgroundColor};
+      /* 设置层级 */
+      z-index: 99999;
+    }  
+</style>
+EOL;
     }
 
     protected function dynamicEffect_1(): string
     {
         return <<<EOL
             <div id="loadingDynamicEffect">
-                <div class="text">Loading...</div>
+                <div class="text"></div>
                 <div class="horizontal">
                     <div class="circlesup">
                         <div class="circle"></div>
@@ -218,13 +254,13 @@ EOL;
 EOL;
     }
 
-    protected function loadStyleLink()
+    protected function loadStyleLink(): void
     {
         $path = sprintf('%s/assets/style-%s.css', self::PLUGINS_PATH, $this->dynamicEffectValue);
         echo '<link rel="stylesheet" type="text/css" href="' . $path . '" />';
     }
 
-    protected function loadScriptSrc()
+    protected function loadScriptSrc(): void
     {
         $path = sprintf('%s/assets/html5.js', self::PLUGINS_PATH);
         $html = <<<EOL
@@ -242,7 +278,15 @@ EOL;
  */
 $dynamicEffectValue = 1;
 
-$loadingDynamicEffectInstance = new LoadingDynamicEffect($dynamicEffectValue);
+/**
+ * 遮罩层背景颜色
+ */
+$maskBackgroundColor = 'rgb(189 254 9 / 50%)';
+
+/**
+ * 实例化加载动效对象
+ */
+$loadingDynamicEffectInstance = new LoadingDynamicEffect($dynamicEffectValue, $maskBackgroundColor);
 
 /**
  * 添加插件事件
