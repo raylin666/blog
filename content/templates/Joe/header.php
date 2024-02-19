@@ -33,7 +33,7 @@ if (!function_exists('_g')) {
     <script src="<?= TEMPLATE_URL; ?>assets/js/jquery.min.js"></script>
     <script src="<?= TEMPLATE_URL; ?>assets/js/jquery.pjax.min.js"></script>
     <script src="<?= TEMPLATE_URL; ?>assets/js/joe.global.js?v=20240217"></script>
-    <script src="<?= TEMPLATE_URL; ?>assets/js/pjax.function.js?v=20240218"></script>
+<!--    <script src="--><?php //= TEMPLATE_URL; ?><!--assets/js/pjax.function.js?v=20240218"></script>-->
     <script src="<?= TEMPLATE_URL; ?>assets/js/joe.archive.min.js"></script>
     <link rel="stylesheet" href="<?= TEMPLATE_URL; ?>assets/css/swiper.min.css"/>
     <script src="<?= TEMPLATE_URL; ?>assets/js/swiper.min.js"></script>

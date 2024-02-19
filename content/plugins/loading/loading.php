@@ -80,8 +80,8 @@ class LoadingDynamicEffect
 </style>
 <script>
     window.onscroll = function () {
-        var scroll = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-        document.getElementById('loadingDynamicEffectMask').style.top = scroll + 'px';
+        // var scroll = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+        // document.getElementById('loadingDynamicEffectMask').style.top = scroll + 'px';
     };
 </script>
 EOL;
