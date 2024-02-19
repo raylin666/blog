@@ -78,6 +78,12 @@ class LoadingDynamicEffect
       z-index: 99999;
     }  
 </style>
+<script>
+    window.onscroll = function () {
+        var scroll = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+        document.getElementById('loadingDynamicEffectMask').style.top = scroll + 'px';
+    };
+</script>
 EOL;
     }
 
@@ -281,7 +287,7 @@ $dynamicEffectValue = 1;
 /**
  * 遮罩层背景颜色
  */
-$maskBackgroundColor = 'rgb(189 254 9 / 50%)';
+$maskBackgroundColor = '#000000';
 
 /**
  * 实例化加载动效对象
